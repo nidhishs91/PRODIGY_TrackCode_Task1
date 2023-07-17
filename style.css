@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Goldman";
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+header .icon {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 110px 100px;
+    align-items: center;
+}
+
+@media (max-width:1000px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+/* 
+@media (max-width:800px) {
+    header .icon {
+        display: inline-block
+    }
+} */
+
+@media (max-width:600px) {
+    section {
+        padding: 125px 30px;
+    }
+}
+
+
+header {
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.4s;
+    padding: 20px 100px;
+    z-index: 10;
+    color: white;
+}
+
+header.fixed {
+    padding: 15px 100px;
+    background-color: rgb(242, 232, 232);
+}
+
+header.fixed .Logo {
+    color: black;
+}
+
+header.fixed ul li a {
+    color: black;
+    padding: 7px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+header ul li a {
+    color: white;
+    padding: 7px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+header.fixed ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+header ul li a:hover {
+    background-color: rgb(243, 69, 69);
+    color: white;
+}
+
+header img {
+    border-radius: 50px;
+}
+
+header .nav {
+    display: flex;
+}
+
+header .Logo {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.toggle_btn {
+    display: none;
+}
+
+.headerdown {
+    display: none;
+}
+
+header .nav li {
+    margin: 0 15px;
+}
+
+header .nav li:first-child {
+    margin-left: 0;
+}
+
+header .nav li:right-child {
+    margin-right: 0;
+}
+
+@media (max-width:1000px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    header .Logo {
+        position: absolute;
+        /* top: 10%; */
+    }
+
+    header .nav li {
+        display: none;
+    }
+
+    /* .toggle_btn {
+        position: absolute;
+        display: block;
+        right: 2%;
+        font-size: 1.4em;
+        cursor: pointer;
+    } */
+
+    header.fixed {
+        padding: 30px 100px;
+        background-color: rgb(242, 232, 232);
+    }
+
+    header.fixed .Logo {
+        color: black;
+        position: absolute;
+        left: 5%;
+        top: 30%;
+    }
+
+    header img {
+        border-radius: 50px;
+        margin-left: 20px;
+    }
+
+
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        margin-bottom: 15px;
+    }
+
+    header .nav li {
+        display: none;
+    }
+}
+
+.box {
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.box video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.box h1 {
+    margin-bottom: 15px;
+    font-size: 75px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.box p {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.box button {
+    padding: 20px;
+    width: 18%;
+    font-size: 25px;
+    background: transparent;
+    font-family: "Goldman";
+    color: white;
+    border-radius: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.box button:hover {
+    background-color: white;
+    color: black;
+}
+
+@media (max-width:800px) {
+    .box {
+        min-height: 810px;
+    }
+
+    .box h1 {
+        font-size: 42px;
+    }
+
+    .box p {
+        font-size: 20px;
+    }
+
+    .box button {
+        padding: 20px;
+        width: 80%;
+        font-size: 25px;
+        background: transparent;
+        font-family: "Goldman";
+        color: white;
+        border-radius: 50px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+
+.wrapper {
+    margin: 50px auto;
+    width: 70%;
+}
+
+.wrapper img {
+    max-width: 400px;
+    float: left;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-right: 50px;
+}
+
+.text-box {
+    font-size: 20px;
+    word-spacing: 5px;
+    text-align: justify;
+}
+
+.p2 {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.b2 {
+    width: 20%;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: "Goldman";
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.b2:hover {
+    background-color: rgb(54, 49, 49);
+    color: white;
+    scale: 1.05;
+}
+
+@media (max-width:800px) {
+    .wrapper img {
+        max-width: 100%;
+        float: left;
+        border: 3px solid black;
+        border-radius: 10px;
+        /* margin-right: 50px; */
+        margin-bottom: 20px;
+    }
+
+    .text-box {
+        font-size: 18px;
+        text-align: justify;
+        position: relative;
+    }
+
+    .wrapper {
+        margin: 50px auto;
+        width: 90%;
+    }
+
+    .p2 {
+        font-size: 38px;
+    }
+
+    .b2 {
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+.p4 {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 38px;
+    /* margin-bottom: 0px; */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.card {
+    color: white;
+    background-color: black;
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.card7 {
+    color: white;
+    background-color: black;
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.card8 {
+    color: white;
+    background-color: black;
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+
+
+.card h1 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.h1 {
+    padding: 50px 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.h4 {
+    padding: 30px 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 17px;
+    text-align: center;
+    margin: 20px;
+}
+
+.p5 {
+    font-size: 17px;
+    text-align: center;
+}
+
+.p55 {
+    font-size: 17px;
+    text-align: center;
+    margin-top: 23px;
+}
+
+.p6 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.p7 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.p9 {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.p8 {
+    font-size: 15px;
+    background-color: red;
+    text-align: center;
+    width: 40%;
+}
+
+.card-image {
+    background-color: aqua;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.card1 {
+    background-image: url(images/rtp.jpg);
+    background-size: cover;
+}
+
+.card2 {
+    background-image: url(images/malware.webp);
+    background-size: cover;
+}
+
+.card3 {
+    background-image: url(images/web_protection.jpg);
+    background-size: cover;
+}
+
+.card4 {
+    background-image: url(images/data_encrption.webp);
+    background-size: cover;
+}
+
+.card5 {
+    background-image: url(images/Parental-Control.png);
+    background-size: cover;
+}
+
+.card6 {
+    background-image: url(images/security\ updates.jpg);
+    background-size: cover;
+}
+
+.card button {
+    font-size: 15px;
+    width: 40%;
+    padding: 7px;
+    position: relative;
+    justify-content: center;
+    left: 30%;
+    font-family: "Goldman";
+    border-radius: 10px;
+    background: red;
+    color: white;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.b3 {
+    font-size: 15px;
+    width: 60%;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    left: 20%;
+    font-family: "Goldman";
+    border-radius: 10px;
+    background: red;
+    color: white;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+
+.card button:hover {
+    background-color: rgb(243, 69, 69);
+}
+
+@media (max-width:800px) {
+    .p4 {
+        margin-top: -10px;
+        text-align: center;
+        font-size: 38px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p6 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 70px;
+    }
+}
+
+.container7 {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.container7 button {
+    margin-top: 50px;
+    font-family: "Goldman";
+    width: 25%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: rgb(255, 109, 109);
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+.container7 button:hover {
+    background-color: rgb(33, 31, 31);
+}
+
+@media (max-width:800px) {
+    .container7 button {
+        margin-top: 40px;
+        width: 60%;
+        font-size: 20px;
+    }
+}
+
+
+.container8 {
+    margin-top: 70px;
+    background-color: black;
+}
+
+.p10 {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    padding: 20px 0px;
+}
+
+.emailid {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.input {
+    outline: none;
+    width: 30%;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.p11 {
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.b6 {
+    font-size: 20px;
+    width: 15%;
+    padding: 15px;
+    font-family: "Goldman";
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-weight: 300px;
+    margin: 30px;
+}
+
+@media (max-width:800px) {
+    .input {
+        outline: none;
+        width: 70%;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    .b6 {
+        width: 45%;
+        padding: 10px;
+    }
+}
+
+.dropbtn {
+    background-color: rgb(243, 69, 69);
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+    position: fixed;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 60px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    z-index: 1;
+    border: 2px solid white;
+    border-radius: 5px;
+    right: 10%;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 2px solid white;
+    width: 100%;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(60, 60, 239);
+}
+
+@media (max-width:800px) {
+    .toggle_btn {
+        background-color: transparent;
+        color: white;
+        padding: 7px;
+        border: 1px solid white;
+        font-size: 16px;
+        border-radius: 0px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: block;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        position: absolute;
+        top: 40%;
+        left: 87%;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: transparent;
+        min-width: 60px;
+        /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+        z-index: 1;
+        border-radius: 5px;
+        right: 10%;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 12px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 2px solid white;
+        width: 100%;
+        transition: 0.3s;
+        font-size: 15px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: rgb(60, 60, 239);
+    }
+
+    /* header.fixed .dropbtn {
+        background-color: transparent;
+        color: white;
+        padding: 7px;
+        border: 1px solid white;
+        font-size: 16px;
+        border-radius: 0px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: block;
+    } */
+}
+
+@media(max-width:800px) {
+    header.fixed .dropdown {
+        border: 2px solid black;
+        position: absolute;
+        top: 17.5%;
+    }
+
+    header.fixed .toggle_btn {
+        color: black;
+
+    }
+
+    header.fixed .dropdown-content {
+        position: absolute;
+        /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+        background-color: black;
+        color: white;
+    }
+}
